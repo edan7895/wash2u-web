@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | Wash2U Malaysia</title>
+  <meta name="description" content="Wash2U Malaysia Privacy Policy - Learn how we collect, use, and protect your personal information.">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    /* ---------- RESET & VARIABLES ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fafcfb;
+      color: #1e2b2f;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    :root {
+      --deep-charcoal: #121b1f;
+      --gold: #c7a857;
+      --gold-light: #e0c97e;
+      --dark-slate: #2a3b41;
+      --pure-white: #ffffff;
+      --soft-gray: #f0f4f3;
+      --text-dark: #1e2b2f;
+      --text-soft: #3f4f55;
+      --shadow: 0 20px 35px -8px rgba(0,20,10,0.15);
+      --border-glow: 0 0 0 1px rgba(199, 168, 87, 0.2);
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ---------- TYPOGRAPHY ---------- */
+    h1, h2, h3 {
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      line-height: 1.2;
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      color: white;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin: 2.5rem 0 1rem;
+      color: var(--deep-charcoal);
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+    h2:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 50px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), #f5e2b0);
+      border-radius: 2px;
+    }
+
+    h3 {
+      font-size: 1.15rem;
+      margin: 1.5rem 0 0.5rem;
+      color: var(--deep-charcoal);
+    }
+
+    p {
+      color: var(--text-soft);
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      margin: 0.5rem 0 1rem 1.5rem;
+      color: var(--text-soft);
+    }
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .last-updated {
+      color: var(--gold);
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+      font-weight: 500;
+    }
+
+    /* ---------- HEADER ---------- */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 5px 25px rgba(0,0,0,0.03);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid rgba(199,168,87,0.2);
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      font-family: 'Playfair Display', serif;
+      background: linear-gradient(135deg, #1e2b2f 0%, #2a3b41 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -0.01em;
+    }
+
+    nav a {
+      margin: 0 18px;
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 500;
+      font-size: 1.05rem;
+      transition: color 0.2s;
+      position: relative;
+    }
+    nav a:hover {
+      color: var(--gold);
+    }
+    nav a:after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: var(--gold);
+      transition: 0.25s;
+    }
+    nav a:hover:after {
+      width: 100%;
+    }
+
+    header .btn {
+      background: transparent;
+      border: 1.5px solid var(--gold);
+      color: var(--deep-charcoal);
+      padding: 8px 22px;
+      border-radius: 40px;
+      font-weight: 600;
+      transition: 0.2s;
+      text-decoration: none;
+    }
+    header .btn:hover {
+      background: var(--gold);
+      color: #121b1f;
+      border-color: var(--gold);
+    }
+
+    /* ---------- HERO SECTION ---------- */
+    .hero {
+      background: linear-gradient(135deg, #0e1a20 0%, #1d2e35 100%);
+      color: white;
+      padding: 60px 40px;
+      text-align: center;
+      position: relative;
+      isolation: isolate;
+    }
+    .hero:before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.1"><path d="M20 30 L40 10 L60 30 L80 10 L90 30 L70 60 L90 80 L60 70 L40 90 L20 70 L10 40 L20 30" fill="none" stroke="%23c7a857" stroke-width="0.5"/></svg>');
+      background-size: 180px;
+      opacity: 0.2;
+      z-index: -1;
+    }
+
+    /* ---------- CONTENT SECTION ---------- */
+    .content-section {
+      padding: 60px 0;
+    }
+
+    .content-card {
+      background: var(--pure-white);
+      padding: 50px 45px;
+      border-radius: 28px;
+      box-shadow: var(--shadow), var(--border-glow);
+      border: 1px solid rgba(199,168,87,0.15);
+    }
+
+    .contact-info {
+      background: var(--soft-gray);
+      padding: 25px 30px;
+      border-radius: 16px;
+      margin-top: 1.5rem;
+    }
+    .contact-info p {
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .contact-info p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      background: var(--deep-charcoal);
+      color: #b7bfc2;
+      text-align: center;
+      padding: 35px 20px;
+      border-top: 3px solid var(--gold);
+      font-size: 1rem;
+    }
+
+    /* ---------- WHATSAPP FLOAT ---------- */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #25d366;
+      color: white;
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 15px 30px rgba(37,211,102,0.3);
+      font-size: 2rem;
+      transition: 0.2s;
+      z-index: 99;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      background: #20b859;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 900px) {
+      header {
+        padding: 15px 25px;
+        flex-wrap: wrap;
+      }
+      nav a {
+        margin: 0 8px;
+      }
+      h1 { font-size: 2.2rem; }
+    }
+    @media (max-width: 600px) {
+      .hero { padding: 40px 20px; }
+      .content-card { padding: 30px 25px; }
+      nav { order: 3; width: 100%; margin-top: 12px; text-align: center; }
+      header .btn { margin-left: auto; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Wash2U Malaysia</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="locations.html">Locations</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+  </nav>
+  <a href="tel:+60123456789" class="btn"><i class="fas fa-phone-alt" style="margin-right: 6px;"></i>Call Now</a>
+</header>
+
+<section class="hero">
+  <h1>Privacy Policy</h1>
+  <p class="last-updated">Last Updated: March 6, 2026</p>
+</section>
+
+<section class="content-section">
+  <div class="container">
+    <div class="content-card">
+      <h2>1. Introduction</h2>
+      <p>Wash2U ("we", "our", or "us") operates car wash services in Malaysia. This Privacy Policy explains how we collect, use, and protect your personal information when you use our services.</p>
+
+      <h2>2. Information We Collect</h2>
+      <p>We collect the following information when you use our services:</p>
+      <ul>
+        <li><strong>Name</strong> — to identify you as our customer</li>
+        <li><strong>Phone Number</strong> — to send receipts and service notifications via WhatsApp</li>
+        <li><strong>Vehicle Plate Number</strong> — to track your service history</li>
+        <li><strong>Service Records</strong> — details of washes and packages purchased</li>
+        <li><strong>Visit History</strong> — dates and locations of your visits</li>
+      </ul>
+
+      <h2>3. How We Use Your Information</h2>
+      <p>We use your information to:</p>
+      <ul>
+        <li>Provide car wash and detailing services</li>
+        <li>Send digital receipts after payment</li>
+        <li>Remind you of upcoming appointments</li>
+        <li>Notify you about car maintenance (1, 2, and 3-month intervals)</li>
+        <li>Re-engage you with offers if you haven't visited in 90+ days</li>
+        <li>Maintain your service history and package balance</li>
+      </ul>
+
+      <h2>4. WhatsApp Messaging</h2>
+      <p>We use WhatsApp Business API (provided by Meta) to send you:</p>
+      <ul>
+        <li>Payment receipts (PDF)</li>
+        <li>Booking reminders (2 hours before appointment)</li>
+        <li>Car maintenance reminders</li>
+        <li>Promotional messages (if inactive for 90+ days)</li>
+      </ul>
+      <p>You can opt out anytime by replying STOP to any WhatsApp message or contacting us directly.</p>
+
+      <h2>5. Data Sharing</h2>
+      <p>We do not sell your data. We only share your phone number with:</p>
+      <ul>
+        <li><strong>Meta Platforms, Inc.</strong> — solely for delivering WhatsApp messages</li>
+      </ul>
+
+      <h2>6. Data Security</h2>
+      <p>We store your data on secure servers in our local systems. Access is restricted to authorized staff only.</p>
+
+      <h2>7. Data Retention</h2>
+      <p>We retain your information for 2 years from your last visit for business and tax purposes. After this period, your data will be deleted.</p>
+
+      <h2>8. Your Rights</h2>
+      <p>You have the right to:</p>
+      <ul>
+        <li><strong>Access</strong> — request a copy of your data</li>
+        <li><strong>Correction</strong> — update inaccurate information</li>
+        <li><strong>Deletion</strong> — request removal of your data</li>
+        <li><strong>Opt-out</strong> — stop receiving WhatsApp messages</li>
+      </ul>
+
+      <h2>9. Contact Us</h2>
+      <p>For privacy-related questions or to exercise your rights:</p>
+      <div class="contact-info">
+        <p><i class="fas fa-envelope" style="color: var(--gold);"></i> <strong>Email:</strong> privacy@wash2u.my</p>
+        <p><i class="fas fa-map-marker-alt" style="color: var(--gold);"></i> <strong>Address:</strong> </p>
+        <p><i class="fab fa-whatsapp" style="color: var(--gold);"></i> <strong>WhatsApp:</strong> </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Wash2U Malaysia | Premium Car Wash in Selangor & KL</p>
+</footer>
+
+<a href="https://wa.me/60123456789" class="whatsapp-float" aria-label="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+</body>
+</html>
