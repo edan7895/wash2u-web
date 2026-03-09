@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Wash Locations in Selayang, Rawang & Cheras | Wash2U Malaysia</title>
+  <meta name="description" content="Find Wash2U Malaysia outlets in Selayang, Rawang and Cheras. Premium car wash near Lotus’s Selayang, Rawang Mall & You City Retail.">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts: Inter & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    /* ---------- RESET & VARIABLES ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fafcfb;
+      color: #1e2b2f;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    :root {
+      --deep-charcoal: #121b1f;
+      --gold: #c7a857;
+      --gold-light: #e0c97e;
+      --dark-slate: #2a3b41;
+      --pure-white: #ffffff;
+      --soft-gray: #f0f4f3;
+      --text-dark: #1e2b2f;
+      --text-soft: #3f4f55;
+      --shadow: 0 20px 35px -8px rgba(0,20,10,0.15);
+      --border-glow: 0 0 0 1px rgba(199, 168, 87, 0.2);
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ---------- TYPOGRAPHY ---------- */
+    h1, h2, h3 {
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    h1 {
+      font-size: 3.2rem;
+      line-height: 1.2;
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+    }
+
+    h2 {
+      font-size: 2.4rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      display: inline-block;
+    }
+    h2:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 70px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), #f5e2b0);
+      border-radius: 2px;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.6rem;
+      color: var(--deep-charcoal);
+    }
+
+    p {
+      color: var(--text-soft);
+      font-size: 1.05rem;
+    }
+
+    /* ---------- HEADER (grid + sticky, 无电话按钮) ---------- */
+    header {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      padding: 20px 40px;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 5px 25px rgba(0,0,0,0.03);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(199,168,87,0.2);
+    }
+
+    .logo {
+      grid-column: 1;
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      height: 50px;
+      width: auto;
+    }
+
+    /* 导航 - 桌面端居中 */
+    .navbar {
+      grid-column: 2;
+      justify-self: center;
+      text-align: center;
+    }
+
+    .navbar a {
+      margin: 0 18px;
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 500;
+      font-size: 1.05rem;
+      transition: color 0.2s;
+      position: relative;
+      display: inline-block;
+    }
+    .navbar a:hover {
+      color: var(--gold);
+    }
+    .navbar a:after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: var(--gold);
+      transition: 0.25s;
+    }
+    .navbar a:hover:after {
+      width: 100%;
+    }
+
+    /* 汉堡按钮 - 默认隐藏 */
+    .hamburger {
+      grid-column: 3;
+      display: none;
+      font-size: 2rem;
+      color: var(--deep-charcoal);
+      cursor: pointer;
+      justify-self: end;
+      transition: color 0.2s;
+    }
+    .hamburger:hover {
+      color: var(--gold);
+    }
+
+    /* ---------- HERO SECTION ---------- */
+    .hero {
+      background: linear-gradient(135deg, #0e1a20 0%, #1d2e35 100%);
+      color: white;
+      padding: 100px 40px;
+      text-align: center;
+      position: relative;
+      isolation: isolate;
+    }
+    .hero:before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.1"><path d="M20 30 L40 10 L60 30 L80 10 L90 30 L70 60 L90 80 L60 70 L40 90 L20 70 L10 40 L20 30" fill="none" stroke="%23c7a857" stroke-width="0.5"/></svg>');
+      background-size: 180px;
+      opacity: 0.2;
+      z-index: -1;
+    }
+    .hero h1 {
+      color: white;
+      max-width: 900px;
+      margin: 0 auto 20px;
+      text-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+    .hero p {
+      color: rgba(255,255,240,0.85);
+      font-size: 1.3rem;
+      margin-bottom: 35px;
+    }
+
+    /* ---------- SECTION BASE ---------- */
+    .section {
+      padding: 90px 0;
+    }
+    .dark {
+      background-color: var(--soft-gray);
+    }
+
+    /* ---------- LOCATION CARDS (with embedded map) ---------- */
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 50px;
+      margin-top: 40px;
+    }
+
+    .location-card {
+      background: var(--pure-white);
+      border-radius: 32px;
+      box-shadow: var(--shadow), var(--border-glow);
+      border: 1px solid rgba(199,168,87,0.15);
+      overflow: hidden;
+      transition: transform 0.25s ease, box-shadow 0.3s;
+    }
+    .location-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 30px 45px -15px rgba(0,40,20,0.2), 0 0 0 1px var(--gold);
+    }
+
+    .card-content {
+      padding: 32px 32px 20px 32px;
+    }
+
+    .card-content i {
+      font-size: 2.5rem;
+      color: var(--gold);
+      margin-bottom: 15px;
+      background: rgba(199,168,87,0.08);
+      padding: 12px;
+      border-radius: 18px;
+    }
+
+    .rating {
+      font-weight: 600;
+      color: var(--deep-charcoal);
+      background: #f4efe3;
+      display: inline-block;
+      padding: 5px 18px;
+      border-radius: 40px;
+      font-size: 1rem;
+      margin: 15px 0 12px;
+      border: 1px solid #e9dcbf;
+    }
+    .rating i {
+      font-size: 0.9rem;
+      padding: 0;
+      background: none;
+      color: var(--gold);
+      margin-right: 4px;
+    }
+
+    .address {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 15px 0 10px;
+      color: var(--text-soft);
+    }
+    .address i {
+      font-size: 1.3rem;
+      background: none;
+      padding: 0;
+      color: var(--gold);
+    }
+
+    .map-container {
+      width: 100%;
+      height: 260px;
+      margin-top: 20px;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      border: 1px solid rgba(199,168,87,0.2);
+    }
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* stats banner */
+    .stats-banner {
+      display: flex;
+      justify-content: space-around;
+      background: rgba(255,255,255,0.5);
+      backdrop-filter: blur(8px);
+      border-radius: 80px;
+      padding: 20px 10px;
+      max-width: 800px;
+      margin: 40px auto 0;
+      border: 1px solid rgba(199,168,87,0.25);
+    }
+    .stat-item {
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--deep-charcoal);
+    }
+    .stat-label {
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 1px;
+    }
+
+    /* ---------- FOOTER (更新社交图标) ---------- */
+    footer {
+      background: var(--deep-charcoal);
+      color: #b7bfc2;
+      text-align: center;
+      padding: 35px 20px;
+      border-top: 3px solid var(--gold);
+      font-size: 1rem;
+    }
+    footer .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 20px;
+    }
+    footer .social-links a {
+      color: white;
+      background: rgba(255, 255, 255, 0.12);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.25s ease;
+      font-size: 1.8rem;
+      text-decoration: none;
+      border: 1px solid rgba(199, 168, 87, 0.3);
+      backdrop-filter: blur(2px);
+    }
+    footer .social-links a:hover {
+      background: var(--gold);
+      color: #121b1f;
+      transform: translateY(-5px);
+      border-color: var(--gold);
+      box-shadow: 0 10px 20px -8px rgba(199, 168, 87, 0.6);
+    }
+
+    /* ---------- WHATSAPP FLOAT ---------- */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #25d366;
+      color: white;
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 15px 30px rgba(37,211,102,0.3);
+      font-size: 2rem;
+      transition: 0.2s;
+      z-index: 99;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      background: #20b859;
+    }
+
+    /* ---------- 移动端样式 (汉堡菜单) ---------- */
+    @media (max-width: 768px) {
+      header {
+        padding: 15px 25px;
+      }
+      .hamburger {
+        display: block;
+      }
+      .navbar {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--pure-white);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        box-shadow: 0 20px 30px -10px rgba(0,0,0,0.15);
+        border-top: 2px solid var(--gold-light);
+        z-index: 99;
+      }
+      .navbar.nav-active {
+        display: flex;
+      }
+      .navbar a {
+        margin: 12px 0;
+        font-size: 1.2rem;
+        width: 100%;
+        text-align: center;
+      }
+      .navbar a:after {
+        display: none;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero { padding: 70px 20px; }
+      h1 { font-size: 2.6rem; }
+      h2 { font-size: 2rem; }
+      .map-container { height: 200px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== 更新后的头部（导航居中+汉堡菜单，无电话按钮）===== -->
+<header>
+  <div class="logo">
+    <img src="photo/logo.png" alt="Wash2U Malaysia">
+  </div>
+  <nav class="navbar" id="mainNav">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="locations.html">Locations</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="hamburger" id="hamburgerBtn">
+    <i class="fas fa-bars" id="hamburgerIcon"></i>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Our Car Wash Locations</h1>
+  <p>Premium car wash near you in Selangor & Kuala Lumpur</p>
+  <div class="stats-banner">
+    <div class="stat-item">
+      <div class="stat-number">10k+</div>
+      <div class="stat-label">Happy Clients</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">4.9★</div>
+      <div class="stat-label">629 Reviews</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">3</div>
+      <div class="stat-label">Locations</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Find Your Nearest Outlet</h2>
+    <div class="location-grid">
+      <!-- Selayang -->
+      <div class="location-card">
+        <div class="card-content">
+          <i class="fas fa-map-pin"></i>
+          <h3>Wash2U Lotus’s Selayang</h3>
+          <div class="rating">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 4.8★ (261+ Reviews)
+          </div>
+          <div class="address">
+            <i class="fas fa-location-dot"></i>
+            <span>Lotus’s Selayang, Kuala Lumpur</span>
+          </div>
+          <div class="map-container">
+            <iframe src="https://maps.google.com/maps?q=Lotus%20Selayang&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rawang -->
+      <div class="location-card">
+        <div class="card-content">
+          <i class="fas fa-map-pin"></i>
+          <h3>Wash2U Lotus’s Rawang</h3>
+          <div class="rating">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 4.9★ (292+ Reviews)
+          </div>
+          <div class="address">
+            <i class="fas fa-location-dot"></i>
+            <span>Lotus’s Rawang, Selangor</span>
+          </div>
+          <div class="map-container">
+            <iframe src="https://maps.google.com/maps?q=Lotus%20Rawang&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cheras -->
+      <div class="location-card">
+        <div class="card-content">
+          <i class="fas fa-map-pin"></i>
+          <h3>Wash2U YouCity Retail</h3>
+          <div class="rating">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 5.0★ (76+ Reviews)
+          </div>
+          <div class="address">
+            <i class="fas fa-location-dot"></i>
+            <span>You City Retail Mall, Cheras</span>
+          </div>
+          <div class="map-container">
+            <iframe src="https://maps.google.com/maps?q=You%20City%20Cheras&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 更新后的 Footer (社交媒体链接已替换) ===== -->
+<footer>
+  <p>© 2026 Wash2U Malaysia | Premium Car Wash in Selangor & KL</p>
+  <div class="social-links">
+    <a href="https://www.facebook.com/share/1A9ZMuW95S/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://www.instagram.com/wash2u_car_saloon?igsh=bjFzZTF2cDE3ZnRp" target="_blank" rel="noopener" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://wa.me/60163683384" target="_blank" rel="noopener" aria-label="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+</footer>
+
+<!-- WhatsApp 悬浮按钮（号码已修正） -->
+<a href="https://wa.me/60163683384" class="whatsapp-float" aria-label="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- 汉堡菜单 JavaScript -->
+<script>
+  (function() {
+    const hamburger = document.getElementById('hamburgerBtn');
+    const nav = document.getElementById('mainNav');
+    const icon = document.getElementById('hamburgerIcon');
+
+    if (!hamburger || !nav || !icon) return;
+
+    function toggleMenu() {
+      nav.classList.toggle('nav-active');
+      if (nav.classList.contains('nav-active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    }
+
+    hamburger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleMenu();
+    });
+
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (nav.classList.contains('nav-active')) {
+          toggleMenu();
+        }
+      });
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) {
+        if (nav.classList.contains('nav-active')) {
+          nav.classList.remove('nav-active');
+          icon.classList.remove('fa-times');
+          icon.classList.add('fa-bars');
+        }
+      }
+    });
+  })();
+</script>
+
+<!-- LocalBusiness Schema (保持不变) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AutoWash",
+      "name": "Wash2U Lotus's Selayang",
+      "url": "https://wash2u.com.my/locations#selayang",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Lotus’s Selayang",
+        "addressLocality": "Kuala Lumpur",
+        "addressCountry": "MY"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "261"
+      }
+    },
+    {
+      "@type": "AutoWash",
+      "name": "Wash2U Lotus's Rawang",
+      "url": "https://wash2u.com.my/locations#rawang",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Lotus’s Rawang",
+        "addressLocality": "Selangor",
+        "addressCountry": "MY"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "292"
+      }
+    },
+    {
+      "@type": "AutoWash",
+      "name": "Wash2U YouCity Retail",
+      "url": "https://wash2u.com.my/locations#cheras",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "You City Retail Mall",
+        "addressLocality": "Cheras",
+        "addressCountry": "MY"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "76"
+      }
+    }
+  ]
+}
+</script>
+
+</body>
+</html>
