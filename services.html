@@ -278,7 +278,9 @@
 
     /* ---------- HERO SECTION ---------- */
     .hero {
-      background: linear-gradient(135deg, #0e1a20 0%, #1d2e35 100%);
+      /* 新增：深色半透明渐变叠加 + 跑车背景图，保证文字清晰可见 */
+background: linear-gradient(rgba(10, 20, 18, 0.75), rgba(10, 20, 18, 0.75)),
+            url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200') center/cover no-repeat;
       color: white;
       padding: 100px 40px;
       text-align: center;
